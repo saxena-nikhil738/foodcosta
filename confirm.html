@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodcosta|successfull</title>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .col2{
+            margin: 30px;
+        }
+        .bill{
+            background-color: rgb(255, 255, 255);
+            border-color: #696969	;
+            border: solid 3px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 5px 10%;
+            padding: 3%;
+            width: 500px;
+        }
+        .header{
+            margin: 20px;
+        }
+        #title{
+            text-align: left;
+        }
+        .pay{
+            text-align: center;
+            border: solid 2px;
+            border-color: #696969;
+            border-radius: 10px;
+            font-family: sans-serif;
+            font-style: inherit;
+            text-shadow: 2px;
+        }
+        hr{
+            color: black;
+        }
+        .banner{
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(image/checkout.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 0;
+            margin: 0px;
+        }
+        .logo{
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        h4, p{
+            display: inline-block;
+        }
+        /* .prt{
+            margin: 20px;
+            padding-top:10px; 
+            width: 100px;
+            height: 30px;
+            color: blue;
+            border: solid skyblue 3px;
+            border-radius: 35px;
+
+         } */
+        /* button{
+            background-color: #32CD32;
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 2px solid rgb(167, 66, 66);
+            /* background: transparent; 
+            color: white;
+            
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        button:hover{
+            border: none;
+        }
+        span{
+            background: #009688;
+            width: 0%;
+            height: 100%;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        button:hover span{
+            width: 100%;
+        } */
+        button{
+            width: 100px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 2px solid #fff;
+            /* background: transparent; */
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            background-color: rgb(32, 134, 218);
+        }
+        /* span{
+            background: #009688;
+            width: 0%;
+            height: 100%;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        button:hover span{
+            width: 100%;
+        } */
+        button:hover{
+            border: none;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="banner">
+        <a href="C:\Users\nikhi\OneDrive\Desktop\project_canteen\index.html">.
+            <!-- <img src="image/home.png" height="100px" alt="image" class="logo"> -->
+        </a>
+    <center>
+      <div class="bill">
+       <div class="header">
+        <h1>Order successfull...✔️</h1>
+        <h2>Thank you!</h2>
+        <h4>Bill Receipt No. # <h4><p id="number"></p>
+       </div>
+          <div class="pay">
+            <div class="col2">
+                <p id="title"></p>
+            </div>
+            <div class="col2">
+                <hr>
+                <p id="total"></p>
+            </div>
+          </div>
+          <button type="button" onclick="window.print()" class="prt"><span></span> Print</button>
+          <button type="button" id="home" class="prt"><span></span> Home</button>
+          <!-- <button type="button" id="btn2"><span></span> Login</button> -->
+            
+      </div>
+    </center>
+    </div>
+    <script>
+            var total=0;
+            let x = document.getElementById("title");
+            jsarray = JSON.parse(sessionStorage.getItem("jsArray"));
+            for(let i=0;i<jsarray.length;i++){
+                console.log(jsarray[i]);
+                let para1 = document.createElement("p");
+                para1.innerText = "Dish: "+jsarray[i].title+" ---------------- Price: Rs. "+jsarray[i].price;
+                total += jsarray[i].price;
+                x.appendChild(para1);
+            }
+            document.getElementById("total").innerHTML ="Total Payable Amount = Rs. " + total;
+
+            document.getElementById("home").addEventListener('click',function(){
+                window.location.href = "index.html";
+            })
+            var k=0;
+            document.getElementById("number").innerHTML = Math.ceil(Math.random()*100);
+            // document.getElementById("number").innerHTML = k;
+            k++;
+    </script>
+</body>
+</html>
