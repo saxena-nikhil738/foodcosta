@@ -148,7 +148,7 @@ document.getElementById('signbtn').addEventListener('click', function(e){
         signArr.push(data);
         localStorage.setItem('register', JSON.stringify(signArr));
         alert('You have successfully signed up');
-        window.location.href = 'login.html';
+        window.location.href = '/fc/login.html';
     }else{
         alert('Please fill all the fields');
     }
