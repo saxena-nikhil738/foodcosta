@@ -1,7 +1,6 @@
 # fc
 
-Live link: https://saxena-nikhil738.github.io/foodcosta/
-<a href="https://www.google.com" target=_blank>tag</a>
+Live link: <a href="https://saxena-nikhil738.github.io/foodcosta/" target=_blank>foodcosta</a>
 
 1). Home page
   * Login
