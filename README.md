@@ -21,6 +21,6 @@
 ![image](https://github.com/saxena-nikhil738/foodcosta/assets/98411087/17657833-dabe-4066-9226-b1e7da17bd46)
 
 4). Receipt
-  * User will print the receipt and got to the manager's counter.
+  * User will print the receipt and got to the manager's counter to checkout their order.
 
 ![image](https://github.com/saxena-nikhil738/foodcosta/assets/98411087/42c674ba-4776-4108-9699-6d58ffd0b6e6)
