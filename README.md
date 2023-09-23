@@ -18,8 +18,8 @@ Live link:
 
 3). Menu page
   * You will redirect to the Menu page.
-  * Select the items ans click to Place oredr.
-  * After clicking the place order One receipt will generate with price and item list.
+  * Select the items and click to Place order.
+  * After clicking the place order, One receipt will generate with price and item list.
 
 ![image](https://github.com/saxena-nikhil738/foodcosta/assets/98411087/17657833-dabe-4066-9226-b1e7da17bd46)
 
