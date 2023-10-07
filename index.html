@@ -167,8 +167,11 @@
         user_record = JSON.parse(localStorage.getItem("users"))
           ? JSON.parse(localStorage.getItem("users"))
           : [];
-
-        if (
+        
+        if(email.length ==0 || password.length==0){
+          alert("Fill the required fields");
+        }
+        else if (
           user_record.some((v) => {
             return v.email == email && v.password == password;
           })
