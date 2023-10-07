@@ -173,7 +173,9 @@
         user_records = JSON.parse(localStorage.getItem("users"))
           ? JSON.parse(localStorage.getItem("users"))
           : [];
-
+        if(email.length ==0 || password.length==0){
+          alert("Fill the required fields");
+        }
         if (
           user_records.some((v) => {
             return v.email == email;
@@ -183,6 +185,8 @@
         } else {
           user_records.push({ email: email, password: password });
           localStorage.setItem("users", JSON.stringify(user_records));
+          alert("User registered");
+          window.location.href = "index.html";
         }
       }
 
